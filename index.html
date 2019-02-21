@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <header>
+    <header id = "navbar">
+        <div id = "navbar-background"></div>
         <nav>
-            <li><a href="#">about</a></li>
-            <li><a href="#">projects</a></li>
-            <li><a href="#">contact</a></li>
+            <li><a id = "nav-about">about</a></li>
+            <li><a id = "nav-projects">projects</a></li>
+            <li><a id = "nav-contact">contact</a></li>
         </nav>
     </header>
 
@@ -23,7 +24,7 @@
         <h3>An Aspiring Game Designer and Software Developer</h3>
     </section>
 
-    <section class = "about">
+    <section id = "about">
         <h3 class = "title">About Me</h3>
         <ul class = "about-content">
             <li>
@@ -43,7 +44,7 @@
 
     </section>
 
-    <section class = "projects">
+    <section id = "projects">
         <h3 class = "title">Projects</h3>
         <div class="projects-content">
             <div class="project-container">
@@ -77,7 +78,7 @@
 
     </section>
 
-    <section class = "contact">
+    <section id = "contact">
         <h3 class = "title">Contact Me</h3>
         <div class = "contacts-content">
             <p class = "contact-email"><i class="fas fa-envelope"></i>alex@alexjobe.net</p>
@@ -98,6 +99,39 @@
             </ul>
         </div>
     </section>
+
+<script>
+    var navBack = document.getElementById("navbar-background");
+
+    var navAbout = document.getElementById("nav-about");
+    var navProjects = document.getElementById("nav-projects");
+    var navContact = document.getElementById("nav-contact");
+
+    var about = document.getElementById("about");
+    var projects = document.getElementById("projects");
+    var contact = document.getElementById("contact");
+
+    document.addEventListener("scroll", function(){
+        if(document.documentElement.scrollTop > 500){
+            navBack.style.opacity = 100;
+        }
+        else {
+            navBack.style.opacity = 0;
+        }
+    });
+    navAbout.addEventListener("click", function(){
+        about.scrollIntoView({behavior: "smooth"});
+    });
+
+    navProjects.addEventListener("click", function(){
+        projects.scrollIntoView({behavior: "smooth"});
+    });
+
+    navContact.addEventListener("click", function(){
+        contact.scrollIntoView({behavior: "smooth"});
+    });
+
+</script>
 
 
 </body>
