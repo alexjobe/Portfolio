@@ -12,6 +12,7 @@
 <body>
     <header id = "navbar">
         <div id = "navbar-background"></div>
+        <a id = "nav-title"><h3>Alex Jobe</h3></a>
         <nav>
             <li><a id = "nav-about">about</a></li>
             <li><a id = "nav-projects">projects</a></li>
@@ -19,57 +20,75 @@
         </nav>
     </header>
 
-    <section class = "hero">
+    <section id = "hero">
         <h1>Hello, I'm Alex</h1>
         <h3>An Aspiring Game Designer and Software Developer</h3>
     </section>
 
     <section id = "about">
         <h3 class = "title">About Me</h3>
-        <ul class = "about-content">
-            <li>
+        <div class = "about-content">
+            <div class = "about-image">
                 <img src="assets/img/me.jpg" alt="Me" height="300">
-            </li>
-            <li>
+            </div>
+            <div class = "about-text">
                 <p>
-                    I'm a software engineer and game developer Lorem ipsum dolor sit amet, 
-                    consectetur adipiscing elit. Quisque augue sapien, sollicitudin a orci a, 
-                    scelerisque pharetra est. Praesent luctus vestibulum ligula, ut aliquam nibh 
-                    fermentum nec. Nulla felis orci, rhoncus eu eleifend quis, tincidunt at nulla. 
-                    Aliquam non ipsum erat. Vestibulum eget commodo lectus. Nulla facilisi. Morbi 
-                    suscipit nisl in suscipit sagittis. Vivamus eget augue lorem.
+                    I am a software developer who loves making games! I have experience with a variety of programming 
+                    languages and platforms, and I strive to learn and grow more as a developer every day. Right now I 
+                    am primarily focused on learning React and improving my skills with Unreal, and I plan to have more 
+                    projects to share in the near future.
                 </p>
-            </li>
+                <br />
+                <p>
+                    When I'm not programming, I can usually be found reading, gaming, or hanging out with my two cats.
+                </p>
+                <br />
+                <p>
+                    Currently Reading: <em>The Red Rising Saga</em>&nbsp by Pierce Brown. It's amazing — go read it!
+                </p>
+                <div id = "skills">
+                    <h3>Some of my skills include:</h4>
+                    <ul>
+                        <li>C++</li><li>C#</li><li>CSS3</li><li>HTML5</li><li>Java</li><li>JavaScript</li><li>jQuery</li>
+                        <li>Linux</li><li>Lua</li><li>MongoDB</li><li>Node.js</li><li>PHP</li><li>Python</li><li>SQL</li>
+                        <li>Unity</li>
+                    </ul>
+                </div>
+            </div>
         </ul>
 
     </section>
 
     <section id = "projects">
         <h3 class = "title">Projects</h3>
-        <div class="projects-content">
+        <div id = "projects-content">
             <div class="project-container">
-                <div class = "project-item">
+                <div class = "project-display">
                     <img src="assets/img/olymbots.png" alt="Olymbots">
                     <i class="fas fa-gamepad"></i>
+                    <a href = "https://ajobe.itch.io/olymbots"></a>
                 </div>
                 <h3>Olymbots</h3>
-                <p>Olymbots is a game blah blah blah blah</p>
+                <p>Built with Unity and C#, <b>Olymbots</b> is a competitive party game that features six mini-games 
+                    for two to four players</p>
             </div>
             <div class="project-container">
-                <div class = "project-item">
+                <div class = "project-display">
                     <img src="assets/img/zordo.png" alt="Zordo">
                     <i class="fas fa-keyboard"></i>
+                    <a href = "https://github.com/alexjobe/Epic-of-Zordo"></a>
                 </div>
                 <h3>Epic of Zordo</h3>
-                <p>Epic of Zordo is a game blah blah blah blah</p>
+                <p>A 2D role-playing game made with Godot and GDScript (a dynamically-typed language based on Python)</p>
             </div>
             <div class="project-container">
-                <div class = "project-item">
-                    <img src="assets/img/olymbots.png" alt="Olymbots">
+                <div class = "project-display">
+                    <img src="assets/img/node.png" alt="Olymbots">
                     <i class="fas fa-cloud"></i>
+                    <a href = "https://github.com/alexjobe/NodeJS-Forum"></a>
                 </div>
                 <h3>Node.js Forum</h3>
-                <p>A forum built in Node.js</p>
+                <p>A forum built with Node.js, Express, and MongoDB that features user authentication</p>
             </div>
         </div>
         <a class = "github" href="https://github.com/alexjobe">See more at Github 
@@ -100,39 +119,7 @@
         </div>
     </section>
 
-<script>
-    var navBack = document.getElementById("navbar-background");
-
-    var navAbout = document.getElementById("nav-about");
-    var navProjects = document.getElementById("nav-projects");
-    var navContact = document.getElementById("nav-contact");
-
-    var about = document.getElementById("about");
-    var projects = document.getElementById("projects");
-    var contact = document.getElementById("contact");
-
-    document.addEventListener("scroll", function(){
-        if(document.documentElement.scrollTop > 500){
-            navBack.style.opacity = 100;
-        }
-        else {
-            navBack.style.opacity = 0;
-        }
-    });
-    navAbout.addEventListener("click", function(){
-        about.scrollIntoView({behavior: "smooth"});
-    });
-
-    navProjects.addEventListener("click", function(){
-        projects.scrollIntoView({behavior: "smooth"});
-    });
-
-    navContact.addEventListener("click", function(){
-        contact.scrollIntoView({behavior: "smooth"});
-    });
-
-</script>
-
+    <script type = "text/JavaScript" src = "portfolio.js"></script>
 
 </body>
 </html>
