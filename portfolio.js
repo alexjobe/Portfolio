@@ -1,42 +1,45 @@
-var navBack = document.getElementById("navbar-background");
-var navProjects = document.getElementById("nav-projects");
-var navContact = document.getElementById("nav-contact");
-var navTitle = document.getElementById("nav-title");
 
-var about = document.getElementById("about");
-var projects = document.getElementById("projects");
-var contact = document.getElementById("contact");
-var hero = document.getElementById("hero");
+window.onload=function(){
+    var navBack = document.getElementById("navbar-background");
+    var navProjects = document.getElementById("nav-projects");
+    var navContact = document.getElementById("nav-contact");
+    var navTitle = document.getElementById("nav-title");
+    var navAbout= document.getElementById("nav-about");
 
-document.addEventListener("scroll", function(){
+    var about = document.getElementById("about");
+    var projects = document.getElementById("projects");
+    var contact = document.getElementById("contact");
+    var hero = document.getElementById("hero");
 
-    if(document.documentElement.scrollTop > 600){
+    document.addEventListener("scroll", function(){
 
         navBack.style.transition = "opacity 1s";
         navTitle.style.transition = "opacity 1s";
 
-        navBack.style.opacity = 100;
-        navTitle.style.opacity = 100;
-    }
-    else {
-        navBack.style.opacity = 0;
-        navTitle.style.opacity = 0;
-    }
-});
+        if(document.documentElement.scrollTop > 600){
 
-navTitle.addEventListener("click", function(){
-    hero.scrollIntoView({behavior: "smooth"});
-});
+            navBack.style.opacity = 100;
+            navTitle.style.opacity = 100;
+        }
+        else {
+            navBack.style.opacity = 0;
+            navTitle.style.opacity = 0;
+        }
+    });
 
-navAbout.addEventListener("click", function(){
-    about.scrollIntoView({behavior: "smooth"});
-});
+    navTitle.addEventListener("click", function(){
+        hero.scrollIntoView({behavior: "smooth"});
+    });
 
-navProjects.addEventListener("click", function(){
-    projects.scrollIntoView({behavior: "smooth"});
-});
+    navAbout.addEventListener("click", function(){
+        about.scrollIntoView({behavior: "smooth"});
+    });
 
-navContact.addEventListener("click", function(){
-    contact.scrollIntoView({behavior: "smooth"});
-});var navAbout = document.getElementById("nav-about");
-    
+    navProjects.addEventListener("click", function(){
+        projects.scrollIntoView({behavior: "smooth"});
+    });
+
+    navContact.addEventListener("click", function(){
+        contact.scrollIntoView({behavior: "smooth"});
+    });var navAbout = document.getElementById("nav-about");
+}
