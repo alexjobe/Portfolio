@@ -53,6 +53,20 @@ section h3.title {
     text-align: center;
 }
 
+@media (max-width: 700px) {
+    p, li {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 2rem 0;
+    }
+
+    section h3.title {
+        font-size: 2rem;
+    }
+} 
+
 /* Header Styles */
 
 header {
@@ -91,6 +105,8 @@ header nav {
 
 header nav li {
     margin: 0 1rem;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 /* Hero Styles */
@@ -112,10 +128,10 @@ header nav li {
 }
 
 #hero h3 {
-    font: 1.8rem "Lato";
+    font: 1.5rem "Lato";
     opacity: 0;
     color: #ffffff;
-    margin-top: 20px;
+    margin-top: 1.2rem;
     animation: 1s fade 1.5s forwards;
 }
 
@@ -133,11 +149,24 @@ header nav li {
     }
 }
 
+@media (max-width: 700px) {
+    
+    #hero h1 {
+        font-size: 4rem;
+    }
+
+    #hero h3 {
+        font: 1rem;
+    }
+
+} 
+
 /* About Styles */
 
 .about-content {
     display: flex;
     width: 100%;
+    height: 100%;
     flex-wrap: nowrap;
     justify-content: center;
 }
@@ -151,6 +180,7 @@ header nav li {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
 }
 
 .about-text {
@@ -165,7 +195,7 @@ header nav li {
 }
 
 #skills ul {
-    height: 100px;
+    height: 6.25rem;
     font-size: 1.3rem;
     font-weight: bold;
     display: flex;
@@ -174,10 +204,11 @@ header nav li {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    flex: 1 1 1;
 }
 
 #skills li {
-    margin: 0.2rem 0;
+    margin: 0.3rem;
 }
 
 #skills h3 {
@@ -185,7 +216,44 @@ header nav li {
     font-size: 1.3rem;
     text-align: right;
     margin-right: 1.8rem;
+    margin-bottom: 2rem;
 }
+
+@media (max-width: 1200px) {
+    #skills {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    #skills ul {
+        height: 10rem;
+    }
+
+    #skills h3 {
+        text-align: center;
+    }
+} 
+
+@media (max-width: 1000px) {
+    .about-content {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #about img {
+        height: 50%;
+        width: 50%;
+    }
+} 
+
+@media (max-width: 700px) {
+    
+    #skills li {
+        font-size: 1rem;
+    }
+
+} 
 
 /* Projects Styles */
 #projects {
@@ -289,6 +357,27 @@ header nav li {
     transition: transform .25s ease-in-out;
 }
 
+@media (max-width: 800px) {
+    
+    #projects-content {
+        flex-wrap: wrap;
+    }
+
+    .project-display {
+        width: 80vw;
+    }
+
+    .project-container h3 {
+        font-size: 1.5rem;
+    }
+
+    .github {
+        margin-top: 2rem;
+        font-size: 2rem;
+    }
+
+} 
+
 /* Contact Styles */
 
 .contacts-content {
@@ -309,9 +398,10 @@ header nav li {
 
 .social-links {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     width: 50%;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 #contact li {
@@ -323,6 +413,7 @@ header nav li {
 #contact a {
     color: #1f2833;
     transition: color .1s ease-in-out;
+    margin: 1rem;
 }
 
 #contact a:hover {
